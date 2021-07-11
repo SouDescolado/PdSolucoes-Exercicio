@@ -14,5 +14,19 @@ class Categorias(admin.ModelAdmin):
     search_fields = ('name',)
 
 
+class Produtos(admin.ModelAdmin):
+    list_display = ('id', 'name')
+    list_display_links = ('id', 'name')
+    search_fields = ('name',)
+
+
+class Pedidos(admin.ModelAdmin):
+    list_display = ('id', 'total')
+    list_display_links = ('id', 'total')
+    search_fields = ('id',)
+
+
 admin.site.register(Usuario, Usuarios)
 admin.site.register(Categoria, Categorias)
+admin.site.register(Produto, Produtos)
+admin.site.register(Pedido, Pedidos)

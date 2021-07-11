@@ -1,10 +1,12 @@
 from django.db import models
+from . import validators
 import datetime
 
 
 class Usuario(models.Model):
     name = models.CharField(max_length=30)
-    cpf = models.CharField(max_length=11, unique=True)
+    cpf = models.CharField(max_length=11, unique=True,
+                           validators=[validators.valida_cpf, ])
 
     def __str__(self):
         return self.name
