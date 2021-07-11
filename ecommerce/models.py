@@ -1,12 +1,13 @@
 from django.db import models
 from . import validators
 import datetime
+from django.core.validators import MinLengthValidator
 
 
 class Usuario(models.Model):
     name = models.CharField(max_length=30)
     cpf = models.CharField(max_length=11, unique=True,
-                           validators=[validators.valida_cpf, ])
+                           validators=[validators.valida_cpf, MinLengthValidator(11)])
 
     def __str__(self):
         return self.name
@@ -35,4 +36,4 @@ class Pedido(models.Model):
     user = models.ForeignKey(Usuario, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.id
+        return str(self.id)

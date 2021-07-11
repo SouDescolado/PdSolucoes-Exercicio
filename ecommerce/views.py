@@ -1,4 +1,3 @@
-from ecommerce.admin import Pedidos
 from re import U
 from rest_framework import viewsets
 from ecommerce.models import *

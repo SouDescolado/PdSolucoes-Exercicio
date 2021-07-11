@@ -23,4 +23,4 @@ class ProdutoSerializer(serializers.ModelSerializer):
 class PedidoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Pedido
-        fields = ['id', 'total', 'invoice_date', 'user', 'product', ]
+        fields = ['id', 'total', 'invoice_date', 'user', 'products', ]
