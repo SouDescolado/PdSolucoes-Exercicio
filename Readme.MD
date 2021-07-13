@@ -4,14 +4,20 @@ Baixe o projeto e extraia em uma pasta
 
 (Opcional) Inicie um ambiente virtual com virtualenv
 
-Execute: pip install -r requirements.txt
+Execute: 
+```
+pip install -r requirements.txt
+```
 
-Execute o servidor: python manage.py runserver
+Execute o servidor: 
+```
+python manage.py runserver
+```
 
 Utilize a API usando os métodos listados abaixo
 
 Classe Usuário:
-
+```
 GET /usuarios/
 
 HTTP 200 OK
@@ -41,9 +47,11 @@ Vary: Accept
     "name": "",
     "cpf": ""
 }
+```
 
 Classe Categorias:
 
+```
 GET /categorias/
 
 HTTP 200 OK
@@ -69,9 +77,11 @@ Vary: Accept
     "id": ,
     "name": ""
 }
+```
 
 Classe	Produtos:
 
+```
 GET /produtos/
 
 HTTP 200 OK
@@ -101,9 +111,11 @@ Vary: Accept
 	"price": 0.0,
 	"category": <id-categorias>
 }
+```
 
 Classe Pedidos
 
+```
 GET /pedidos/
 
 HTTP 200 OK
@@ -136,3 +148,4 @@ GET /pedidos/<id>/
 		<id-produtos>
 	]
 }
+```
